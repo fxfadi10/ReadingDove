@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ReadingDove - Discover the best books across every genre. Expert reviews, curated lists, and affiliate recommendations for business, self-help, fiction, and more.">
+    <meta name="keywords" content="best books 2026, book reviews, Amazon books, reading recommendations, book affiliate, bestsellers">
+    <title>ReadingDove - Discover Your Next Favorite Book</title>
+
+    <!-- Google AdSense Script (Replace ca-pub-XXXXXXXX with your actual ID) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --accent: #f39c12;
+            --light: #ecf0f1;
+            --dark: #1a252f;
+            --text: #333;
+            --text-light: #666;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.15);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: #f8f9fa;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--white);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-top {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo svg { width: 32px; height: 32px; }
+
+        .tagline {
+            font-size: 12px;
+            opacity: 0.9;
+            margin-top: -5px;
+            letter-spacing: 1px;
+        }
+
+        .search-bar {
+            display: flex;
+            max-width: 400px;
+            width: 100%;
+            margin: 0 20px;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 25px 0 0 25px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            background: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 0 25px 25px 0;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .search-bar button:hover { background: #c0392b; }
+
+        /* Navigation */
+        nav {
+            background: rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 0;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .nav-links::-webkit-scrollbar { display: none; }
+
+        .nav-links li a {
+            display: block;
+            padding: 12px 18px;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            white-space: nowrap;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-links li a:hover, .nav-links li a.active {
+            background: rgba(255,255,255,0.1);
+            border-bottom-color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></svg>');
+            background-size: 100px;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* AdSense Slots */
+        .ad-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .ad-label {
+            font-size: 10px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .ad-slot {
+            background: var(--light);
+            border: 1px dashed #bdc3c7;
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 12px;
+            border-radius: 8px;
+        }
+
+        .ad-slot.leaderboard { min-height: 90px; }
+        .ad-slot.medium-rectangle { min-height: 250px; max-width: 300px; margin: 0 auto; }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            color: var(--primary);
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 2px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 13px;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Book Grid */
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .book-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .book-image {
+            height: 300px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .book-image img {
+            max-height: 220px;
+            max-width: 150px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .book-card:hover .book-image img {
+            transform: scale(1.05);
+        }
+
+        .book-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--secondary);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .book-badge.bestseller { background: #e74c3c; }
+        .book-badge.new { background: #27ae60; }
+        .book-badge.top { background: #f39c12; }
+
+        .book-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-category {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--secondary);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .book-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .book-author {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .book-rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 12px;
+        }
+
+        .stars {
+            color: var(--accent);
+            font-size: 16px;
+        }
+
+        .rating-count {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .book-description {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.5;
+            margin-bottom: 15px;
+            flex: 1;
+        }
+
+        .book-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .book-price .original {
+            font-size: 16px;
+            color: var(--text-light);
+            text-decoration: line-through;
+            margin-left: 8px;
+            font-weight: 400;
+        }
+
+        .affiliate-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .affiliate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);
+        }
+
+        /* Blog Section */
+        .blog-section {
+            background: var(--white);
+            padding: 60px 0;
+            margin-top: 40px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .blog-card {
+            background: #f8f9fa;
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid #e9ecef;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .blog-image {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+        }
+
+        .blog-content {
+            padding: 25px;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 12px;
+            color: var(--text-light);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .blog-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .blog-excerpt {
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+        }
+
+        .read-more:hover { gap: 10px; }
+
+        /* Newsletter */
+        .newsletter {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .newsletter h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .newsletter p {
+            font-size: 16px;
+            opacity: 0.9;
+            max-width: 500px;
+            margin: 0 auto 25px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            min-width: 250px;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 30px;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .newsletter-form button {
+            padding: 14px 30px;
+            background: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 15px;
+            transition: var(--transition);
+        }
+
+        .newsletter-form button:hover { background: #c0392b; }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.8);
+            padding: 50px 20px 20px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-col a:hover { color: var(--accent); }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .footer-bottom a {
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 16px; }
+            .header-top { flex-direction: column; gap: 15px; }
+            .search-bar { margin: 0; max-width: 100%; }
+            .books-grid { grid-template-columns: 1fr; }
+            .blog-grid { grid-template-columns: 1fr; }
+            .section-header { flex-direction: column; align-items: flex-start; }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .book-card, .blog-card {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        /* Hide/Show for filtering */
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div>
+                <div class="logo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                    ReadingDove
+                </div>
+                <div class="tagline">Curated Books. Trusted Reviews. Smart Reading.</div>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search books, authors, genres...">
+                <button onclick="performSearch()">Search</button>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#business">Business</a></li>
+                    <li><a href="#selfhelp">Self-Help</a></li>
+                    <li><a href="#fiction">Fiction</a></li>
+                    <li><a href="#nonfiction">Non-Fiction</a></li>
+                    <li><a href="#children">Children</a></li>
+                    <li><a href="#romance">Romance</a></li>
+                    <li><a href="#thriller">Thriller</a></li>
+                    <li><a href="#scifi">Sci-Fi & Fantasy</a></li>
+                    <li><a href="#biography">Biography</a></li>
+                    <li><a href="#health">Health</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Discover Your Next Favorite Book</h1>
+            <p>Expert-curated recommendations across 10 top-selling categories. From business breakthroughs to fiction escapes, find books that transform your life.</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">35+</span>
+                    <span class="stat-label">Curated Books</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">10</span>
+                    <span class="stat-label">Categories</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">10</span>
+                    <span class="stat-label">Expert Articles</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top AdSense Slot -->
+    <div class="ad-container">
+        <div class="ad-label">Advertisement</div>
+        <div class="ad-slot leaderboard">
+            <!-- Replace with your AdSense code -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+    </div>
+
+    <!-- Books Section -->
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Featured Books</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterBooks('all')">All</button>
+                <button class="filter-btn" onclick="filterBooks('business')">Business</button>
+                <button class="filter-btn" onclick="filterBooks('selfhelp')">Self-Help</button>
+                <button class="filter-btn" onclick="filterBooks('fiction')">Fiction</button>
+                <button class="filter-btn" onclick="filterBooks('nonfiction')">Non-Fiction</button>
+                <button class="filter-btn" onclick="filterBooks('children')">Children</button>
+                <button class="filter-btn" onclick="filterBooks('romance')">Romance</button>
+                <button class="filter-btn" onclick="filterBooks('thriller')">Thriller</button>
+                <button class="filter-btn" onclick="filterBooks('scifi')">Sci-Fi</button>
+                <button class="filter-btn" onclick="filterBooks('biography')">Biography</button>
+                <button class="filter-btn" onclick="filterBooks('health')">Health</button>
+            </div>
+        </div>
+
+        <div class="books-grid" id="booksGrid">
+
+            <!-- BUSINESS BOOKS -->
+            <div class="book-card" data-category="business">
+                <div class="book-image">
+                    <span style="font-size:80px;">📊</span>
+                    <span class="book-badge bestseller">Bestseller</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Business</div>
+                    <div class="book-title">Atomic Habits</div>
+                    <div class="book-author">by James Clear</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.8 (125,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">An easy, proven way to build good habits and break bad ones. Transform your life with tiny changes that deliver remarkable results.</div>
+                    <div class="book-price">$13.79 <span class="original">$27.00</span></div>
+                    <a href="https://www.amazon.com/dp/0735211299?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="business">
+                <div class="book-image">
+                    <span style="font-size:80px;">💰</span>
+                    <span class="book-badge top">Top Rated</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Business</div>
+                    <div class="book-title">The 5 Types of Wealth</div>
+                    <div class="book-author">by Sahil Bloom</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.7 (8,500+ reviews)</span>
+                    </div>
+                    <div class="book-description">A transformative guide to design your dream life around five kinds of wealth: time, social, mental, physical, and financial.</div>
+                    <div class="book-price">$18.89 <span class="original">$28.00</span></div>
+                    <a href="https://www.amazon.com/dp/0593714022?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="business">
+                <div class="book-image">
+                    <span style="font-size:80px;">🚀</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Business</div>
+                    <div class="book-title">The Lean Startup</div>
+                    <div class="book-author">by Eric Ries</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">4.5 (18,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">How today's entrepreneurs use continuous innovation to create radically successful businesses. The bible for modern startups.</div>
+                    <div class="book-price">$14.29 <span class="original">$28.00</span></div>
+                    <a href="https://www.amazon.com/dp/0307887898?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="business">
+                <div class="book-image">
+                    <span style="font-size:80px;">🔮</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Business</div>
+                    <div class="book-title">Zero to One</div>
+                    <div class="book-author">by Peter Thiel</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">4.6 (22,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">Notes on startups, or how to build the future. Thiel's contrarian insights on innovation, competition, and building monopolies.</div>
+                    <div class="book-price">$12.99 <span class="original">$27.00</span></div>
+                    <a href="https://www.amazon.com/dp/0804139296?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <!-- SELF-HELP BOOKS -->
+            <div class="book-card" data-category="selfhelp">
+                <div class="book-image">
+                    <span style="font-size:80px;">⭐</span>
+                    <span class="book-badge bestseller">#1 Bestseller</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Self-Help</div>
+                    <div class="book-title">The Let Them Theory</div>
+                    <div class="book-author">by Mel Robbins</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.9 (45,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">The #1 bestselling print book of 2025. A life-changing psychology secret that helps you stop worrying and start living.</div>
+                    <div class="book-price">$16.99 <span class="original">$29.99</span></div>
+                    <a href="https://www.amazon.com/dp/059371264X?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="selfhelp">
+                <div class="book-image">
+                    <span style="font-size:80px;">🧘</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Self-Help</div>
+                    <div class="book-title">The Happiness Trap</div>
+                    <div class="book-author">by Russ Harris</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">4.6 (12,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">Stop struggling, start living. Based on ACT therapy, learn to escape the happiness trap and live in alignment with your values.</div>
+                    <div class="book-price">$11.49 <span class="original">$18.95</span></div>
+                    <a href="https://www.amazon.com/dp/1590305841?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="selfhelp">
+                <div class="book-image">
+                    <span style="font-size:80px;">💪</span>
+                    <span class="book-badge top">Top Rated</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Self-Help</div>
+                    <div class="book-title">Grit: The Power of Passion</div>
+                    <div class="book-author">by Angela Duckworth</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">4.6 (19,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">The power of passion and perseverance. Why talent alone isn't enough and how grit determines long-term success.</div>
+                    <div class="book-price">$10.99 <span class="original">$19.99</span></div>
+                    <a href="https://www.amazon.com/dp/1501111116?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="selfhelp">
+                <div class="book-image">
+                    <span style="font-size:80px;">🎯</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Self-Help</div>
+                    <div class="book-title">The 7 Habits of Highly Effective People</div>
+                    <div class="book-author">by Stephen R. Covey</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.7 (85,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">Powerful lessons in personal change. Over 400 million copies sold worldwide. The definitive guide to principle-centered living.</div>
+                    <div class="book-price">$13.79 <span class="original">$32.00</span></div>
+                    <a href="https://www.amazon.com/dp/1982137274?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <!-- FICTION BOOKS -->
+            <div class="book-card" data-category="fiction">
+                <div class="book-image">
+                    <span style="font-size:80px;">📖</span>
+                    <span class="book-badge top">Top 5</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Fiction</div>
+                    <div class="book-title">The Correspondent</div>
+                    <div class="book-author">by Virginia Evans</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.6 (87,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">A sweeping historical novel of love, war, and the power of truth. Currently #5 on Amazon's bestseller list with rave reviews.</div>
+                    <div class="book-price">$19.58 <span class="original">$28.00</span></div>
+                    <a href="https://www.amazon.com/dp/B0CXXXXXXX?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="fiction">
+                <div class="book-image">
+                    <span style="font-size:80px;">🌸</span>
+                    <span class="book-badge new">New Release</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Fiction</div>
+                    <div class="book-title">Your Name (Novel)</div>
+                    <div class="book-author">by Makoto Shinkai</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.9 (10,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">The novelization of the beloved anime film. A beautiful story of two teenagers who mysteriously swap bodies across time.</div>
+                    <div class="book-price">$12.99 <span class="original">$18.99</span></div>
+                    <a href="https://www.amazon.com/dp/0316471869?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="fiction">
+                <div class="book-image">
+                    <span style="font-size:80px;">🎭</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Fiction</div>
+                    <div class="book-title">The Dinner Party</div>
+                    <div class="book-author">by Freida McFadden</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">4.3 (1,800+ reviews)</span>
+                    </div>
+                    <div class="book-description">A pick-your-poison adventure thriller from the queen of psychological suspense. Every choice leads to a deadly consequence.</div>
+                    <div class="book-price">$11.69 <span class="original">$16.99</span></div>
+                    <a href="https://www.amazon.com/dp/B0CXXXXXXX?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="fiction">
+                <div class="book-image">
+                    <span style="font-size:80px;">🏔️</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Fiction</div>
+                    <div class="book-title">The Strange House</div>
+                    <div class="book-author">by Japanese Mystery Series</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.9 (4,700+ reviews)</span>
+                    </div>
+                    <div class="book-description">A gripping detective horror novel that has taken TikTok by storm. Atmospheric, terrifying, and impossible to put down.</div>
+                    <div class="book-price">$10.87 <span class="original">$15.99</span></div>
+                    <a href="https://www.amazon.com/dp/B0CXXXXXXX?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <!-- NON-FICTION BOOKS -->
+            <div class="book-card" data-category="nonfiction">
+                <div class="book-image">
+                    <span style="font-size:80px;">🤝</span>
+                    <span class="book-badge bestseller">Classic</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Non-Fiction</div>
+                    <div class="book-title">How to Win Friends & Influence People</div>
+                    <div class="book-author">by Dale Carnegie</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.7 (95,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">The timeless classic on communication, empathy, and influence. Transform your personal and professional relationships.</div>
+                    <div class="book-price">$9.99 <span class="original">$18.99</span></div>
+                    <a href="https://www.amazon.com/dp/0671027034?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="nonfiction">
+                <div class="book-image">
+                    <span style="font-size:80px;">🧠</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Non-Fiction</div>
+                    <div class="book-title">Emotional Intelligence</div>
+                    <div class="book-author">by Daniel Goleman</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">4.5 (16,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">Why EQ matters more than IQ. The groundbreaking book that redefined success and leadership in the modern world.</div>
+                    <div class="book-price">$12.99 <span class="original">$19.00</span></div>
+                    <a href="https://www.amazon.com/dp/055338371X?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="nonfiction">
+                <div class="book-image">
+                    <span style="font-size:80px;">🌱</span>
+                    <span class="book-badge top">Must Read</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Non-Fiction</div>
+                    <div class="book-title">Mindset: The New Psychology of Success</div>
+                    <div class="book-author">by Carol S. Dweck</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">4.6 (28,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">Discover the power of growth mindset. How changing your beliefs about ability can transform your achievements.</div>
+                    <div class="book-price">$11.49 <span class="original">$17.00</span></div>
+                    <a href="https://www.amazon.com/dp/0345472322?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <!-- CHILDREN'S BOOKS -->
+            <div class="book-card" data-category="children">
+                <div class="book-image">
+                    <span style="font-size:80px;">🧸</span>
+                    <span class="book-badge bestseller">Popular</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Children's Books</div>
+                    <div class="book-title">Children's Learning Book Set</div>
+                    <div class="book-author">by Early Education Press</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.9 (16,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">8-book bundle for early learners. Colors, numbers, animals, and more. Durable pages perfect for little hands.</div>
+                    <div class="book-price">$15.99 <span class="original">$29.99</span></div>
+                    <a href="https://www.amazon.com/dp/B0CXXXXXXX?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="children">
+                <div class="book-image">
+                    <span style="font-size:80px;">🐉</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Children's Books</div>
+                    <div class="book-title">The Very Hungry Caterpillar</div>
+                    <div class="book-author">by Eric Carle</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.9 (52,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">The beloved classic that has taught generations of children about counting, days of the week, and the butterfly life cycle.</div>
+                    <div class="book-price">$5.06 <span class="original">$10.99</span></div>
+                    <a href="https://www.amazon.com/dp/0399226907?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="children">
+                <div class="book-image">
+                    <span style="font-size:80px;">👑</span>
+                    <span class="book-badge new">New</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Children's Books</div>
+                    <div class="book-title">The Wild Robot</div>
+                    <div class="book-author">by Peter Brown</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.8 (14,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">A heartwarming story of a robot stranded in the wilderness who learns what it means to be alive and to belong.</div>
+                    <div class="book-price">$8.99 <span class="original">$14.99</span></div>
+                    <a href="https://www.amazon.com/dp/0316381993?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <!-- ROMANCE BOOKS -->
+            <div class="book-card" data-category="romance">
+                <div class="book-image">
+                    <span style="font-size:80px;">❤️</span>
+                    <span class="book-badge bestseller">BookTok Hit</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Romance</div>
+                    <div class="book-title">Fourth Wing</div>
+                    <div class="book-author">by Rebecca Yarros</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.8 (85,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">The romantasy phenomenon that broke the internet. Dragons, war college, and an enemies-to-lovers romance for the ages.</div>
+                    <div class="book-price">$14.99 <span class="original">$29.99</span></div>
+                    <a href="https://www.amazon.com/dp/1649374046?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="romance">
+                <div class="book-image">
+                    <span style="font-size:80px;">🌙</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Romance</div>
+                    <div class="book-title">A Court of Thorns and Roses</div>
+                    <div class="book-author">by Sarah J. Maas</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.8 (92,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">The book that launched the romantasy craze. A Beauty and the Beast retelling with faeries, magic, and epic romance.</div>
+                    <div class="book-price">$13.79 <span class="original">$19.00</span></div>
+                    <a href="https://www.amazon.com/dp/1619635180?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="romance">
+                <div class="book-image">
+                    <span style="font-size:80px;">💔</span>
+                    <span class="book-badge top">Trending</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Romance</div>
+                    <div class="book-title">It Ends With Us</div>
+                    <div class="book-author">by Colleen Hoover</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">4.7 (180,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">The Colleen Hoover masterpiece that redefined contemporary romance. A powerful story of love, resilience, and hard choices.</div>
+                    <div class="book-price">$10.99 <span class="original">$17.00</span></div>
+                    <a href="https://www.amazon.com/dp/1501110365?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <!-- THRILLER BOOKS -->
+            <div class="book-card" data-category="thriller">
+                <div class="book-image">
+                    <span style="font-size:80px;">🔪</span>
+                    <span class="book-badge bestseller">#1 Thriller</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Thriller & Mystery</div>
+                    <div class="book-title">The Housemaid</div>
+                    <div class="book-author">by Freida McFadden</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.5 (95,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">A psychological thriller about a housemaid who discovers her perfect employers are hiding deadly secrets. Unputdownable.</div>
+                    <div class="book-price">$10.99 <span class="original">$17.99</span></div>
+                    <a href="https://www.amazon.com/dp/1538742578?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="thriller">
+                <div class="book-image">
+                    <span style="font-size:80px;">🕵️</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Thriller & Mystery</div>
+                    <div class="book-title">The Silent Patient</div>
+                    <div class="book-author">by Alex Michaelides</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">4.5 (68,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">A woman shoots her husband and never speaks again. A psychotherapist becomes obsessed with uncovering her motive.</div>
+                    <div class="book-price">$12.99 <span class="original">$27.00</span></div>
+                    <a href="https://www.amazon.com/dp/1250301696?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="thriller">
+                <div class="book-image">
+                    <span style="font-size:80px;">⚖️</span>
+                    <span class="book-badge new">New</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Thriller & Mystery</div>
+                    <div class="book-title">The Judge's List</div>
+                    <div class="book-author">by John Grisham</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">4.4 (22,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">A judge is suspected of murder. An investigator risks everything to expose the truth in this legal thriller masterpiece.</div>
+                    <div class="book-price">$14.99 <span class="original">$29.95</span></div>
+                    <a href="https://www.amazon.com/dp/0385546025?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <!-- SCI-FI & FANTASY -->
+            <div class="book-card" data-category="scifi">
+                <div class="book-image">
+                    <span style="font-size:80px;">🐉</span>
+                    <span class="book-badge bestseller">BookTok #1</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Sci-Fi & Fantasy</div>
+                    <div class="book-title">Throne of Glass</div>
+                    <div class="book-author">by Sarah J. Maas</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.7 (45,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">An assassin is offered freedom if she competes in a deadly tournament. The epic fantasy series that started a phenomenon.</div>
+                    <div class="book-price">$11.99 <span class="original">$18.00</span></div>
+                    <a href="https://www.amazon.com/dp/1599906953?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="scifi">
+                <div class="book-image">
+                    <span style="font-size:80px;">🚀</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Sci-Fi & Fantasy</div>
+                    <div class="book-title">Project Hail Mary</div>
+                    <div class="book-author">by Andy Weir</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.8 (72,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">A lone astronaut must save Earth from extinction. The most acclaimed science fiction novel of the decade.</div>
+                    <div class="book-price">$14.99 <span class="original">$30.00</span></div>
+                    <a href="https://www.amazon.com/dp/0593135202?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="scifi">
+                <div class="book-image">
+                    <span style="font-size:80px;">🌌</span>
+                    <span class="book-badge top">Award Winner</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Sci-Fi & Fantasy</div>
+                    <div class="book-title">Dune</div>
+                    <div class="book-author">by Frank Herbert</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">4.7 (58,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">The epic masterpiece of politics, religion, and ecology on a desert planet. The bestselling sci-fi novel of all time.</div>
+                    <div class="book-price">$10.99 <span class="original">$18.00</span></div>
+                    <a href="https://www.amazon.com/dp/0441013597?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <!-- BIOGRAPHY -->
+            <div class="book-card" data-category="biography">
+                <div class="book-image">
+                    <span style="font-size:80px;">👟</span>
+                    <span class="book-badge bestseller">Bill Gates Pick</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Biography & Memoir</div>
+                    <div class="book-title">Shoe Dog</div>
+                    <div class="book-author">by Phil Knight</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.8 (42,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">The candid memoir by Nike's founder. A refreshingly honest journey from startup to global icon, full of mistakes and triumphs.</div>
+                    <div class="book-price">$12.99 <span class="original">$21.00</span></div>
+                    <a href="https://www.amazon.com/dp/1501135910?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="biography">
+                <div class="book-image">
+                    <span style="font-size:80px;">🎾</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Biography & Memoir</div>
+                    <div class="book-title">Open</div>
+                    <div class="book-author">by Andre Agassi</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.8 (15,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">The most honest memoir ever written about discipline, identity, and what it really takes to be great. Raw and inspiring.</div>
+                    <div class="book-price">$13.99 <span class="original">$18.99</span></div>
+                    <a href="https://www.amazon.com/dp/0307388409?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="biography">
+                <div class="book-image">
+                    <span style="font-size:80px;">🔥</span>
+                    <span class="book-badge new">New</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Biography & Memoir</div>
+                    <div class="book-title">Burn Rate</div>
+                    <div class="book-author">by Andy Dunn</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">4.5 (3,200+ reviews)</span>
+                    </div>
+                    <div class="book-description">Launching a startup and losing my mind. The former Bonobos CEO opens up about success, bipolar disorder, and redemption.</div>
+                    <div class="book-price">$15.99 <span class="original">$28.00</span></div>
+                    <a href="https://www.amazon.com/dp/0593183886?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <!-- HEALTH & WELLNESS -->
+            <div class="book-card" data-category="health">
+                <div class="book-image">
+                    <span style="font-size:80px;">🌿</span>
+                    <span class="book-badge top">Wellness</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Health & Wellness</div>
+                    <div class="book-title">The Year of Less</div>
+                    <div class="book-author">by Cait Flanders</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">4.5 (8,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">How I stopped shopping, gave away my belongings, and discovered life is worth more than anything you can buy in a store.</div>
+                    <div class="book-price">$11.99 <span class="original">$19.99</span></div>
+                    <a href="https://www.amazon.com/dp/1401952356?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="health">
+                <div class="book-image">
+                    <span style="font-size:80px;">🛡️</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Health & Wellness</div>
+                    <div class="book-title">The Book of Boundaries</div>
+                    <div class="book-author">by Melissa Urban</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.7 (6,500+ reviews)</span>
+                    </div>
+                    <div class="book-description">Set the limits that will set you free. Practical scripts and strategies for saying no without guilt in every area of life.</div>
+                    <div class="book-price">$14.99 <span class="original">$27.00</span></div>
+                    <a href="https://www.amazon.com/dp/0593332093?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="health">
+                <div class="book-image">
+                    <span style="font-size:80px;">🧘‍♀️</span>
+                    <span class="book-badge bestseller">Classic</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Health & Wellness</div>
+                    <div class="book-title">The Untethered Soul</div>
+                    <div class="book-author">by Michael A. Singer</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">4.7 (32,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">The journey beyond yourself. A guide to inner peace and freedom by letting go of the thoughts and emotions that limit consciousness.</div>
+                    <div class="book-price">$12.99 <span class="original">$18.95</span></div>
+                    <a href="https://www.amazon.com/dp/1572245372?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+            <div class="book-card" data-category="health">
+                <div class="book-image">
+                    <span style="font-size:80px;">💵</span>
+                </div>
+                <div class="book-content">
+                    <div class="book-category">Health & Wellness</div>
+                    <div class="book-title">Your Money or Your Life</div>
+                    <div class="book-author">by Vicki Robin & Joe Dominguez</div>
+                    <div class="book-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-count">4.6 (11,000+ reviews)</span>
+                    </div>
+                    <div class="book-description">Transform your relationship with money and achieve financial independence. The classic guide to aligning your finances with your values.</div>
+                    <div class="book-price">$13.49 <span class="original">$18.00</span></div>
+                    <a href="https://www.amazon.com/dp/0143115766?tag=readingdove-20" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Buy on Amazon</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Middle AdSense Slot -->
+    <div class="ad-container">
+        <div class="ad-label">Advertisement</div>
+        <div class="ad-slot leaderboard">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+    </div>
+
+    <!-- Blog Section -->
+    <section class="blog-section" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Reading Insights & Articles</h2>
+            </div>
+
+            <div class="blog-grid">
+
+                <article class="blog-card">
+                    <div class="blog-image">📚</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>May 15, 2026</span>
+                            <span>Business</span>
+                        </div>
+                        <h3 class="blog-title">Top 10 Business Books for Entrepreneurs in 2026</h3>
+                        <p class="blog-excerpt">From Sahil Bloom's "The 5 Types of Wealth" to Eric Ries' timeless "Lean Startup," discover the must-read business books that are defining entrepreneurial success this year.</p>
+                        <a href="#" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">🔄</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>May 12, 2026</span>
+                            <span>Self-Help</span>
+                        </div>
+                        <h3 class="blog-title">How to Build Reading Habits That Actually Stick</h3>
+                        <p class="blog-excerpt">James Clear's Atomic Habits framework applied specifically to reading. Learn the 1% daily improvement strategy that turns occasional readers into book devourers.</p>
+                        <a href="#" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">📱</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>May 10, 2026</span>
+                            <span>Industry</span>
+                        </div>
+                        <h3 class="blog-title">The BookTok Effect: How Social Media is Changing Book Sales</h3>
+                        <p class="blog-excerpt">BookTok has driven millions of book sales, rescued struggling bookstores, and created entirely new genres like romantasy. Here's the data behind the phenomenon.</p>
+                        <a href="#" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">📖</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>May 8, 2026</span>
+                            <span>Formats</span>
+                        </div>
+                        <h3 class="blog-title">Print vs Digital: Which Book Format is Right for You?</h3>
+                        <p class="blog-excerpt">Print sales hit 762.4 million units in 2025, yet digital keeps growing. We break down the pros, cons, and best use cases for every book format available today.</p>
+                        <a href="#" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">✨</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>May 5, 2026</span>
+                            <span>Self-Help</span>
+                        </div>
+                        <h3 class="blog-title">5 Self-Help Books That Actually Changed My Life</h3>
+                        <p class="blog-excerpt">A brutally honest review of which self-help books deliver results and which are just hype. Featuring The Let Them Theory, Atomic Habits, and The Happiness Trap.</p>
+                        <a href="#" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">💕</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>May 3, 2026</span>
+                            <span>Romance</span>
+                        </div>
+                        <h3 class="blog-title">Why Romance and Romantasy Are Dominating 2026</h3>
+                        <p class="blog-excerpt">Adult fiction grew 5.4% in 2025, driven by romance and romantasy. We explore why readers are flocking to love stories with dragons, magic, and epic world-building.</p>
+                        <a href="#" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">🧪</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>April 28, 2026</span>
+                            <span>Science</span>
+                        </div>
+                        <h3 class="blog-title">The Science Behind Atomic Habits: Why Tiny Changes Work</h3>
+                        <p class="blog-excerpt">A deep dive into the behavioral psychology research that powers James Clear's habit-building framework. Understanding the science makes implementation easier.</p>
+                        <a href="#" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">👶</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>April 25, 2026</span>
+                            <span>Parenting</span>
+                        </div>
+                        <h3 class="blog-title">Children's Books That Build Emotional Intelligence</h3>
+                        <p class="blog-excerpt">The best picture books and early readers that teach empathy, resilience, and self-awareness. Expert picks for every age from toddler to middle grade.</p>
+                        <a href="#" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">💼</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>April 20, 2026</span>
+                            <span>Affiliate</span>
+                        </div>
+                        <h3 class="blog-title">How to Start a Book Affiliate Business from Scratch</h3>
+                        <p class="blog-excerpt">A complete guide to building a profitable book recommendation website. From Amazon Associates setup to content strategy and AdSense approval requirements.</p>
+                        <a href="#" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">🏆</div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>April 18, 2026</span>
+                            <span>Challenge</span>
+                        </div>
+                        <h3 class="blog-title">2026 Reading Challenge: 52 Books in 52 Weeks</h3>
+                        <p class="blog-excerpt">Our curated weekly reading plan covering all 10 categories. From business to sci-fi, this challenge will expand your mind and transform your year.</p>
+                        <a href="#" class="read-more">Read Article →</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sidebar AdSense -->
+    <div class="ad-container">
+        <div class="ad-label">Advertisement</div>
+        <div class="ad-slot medium-rectangle">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="rectangle"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+    </div>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <h2>Join 25,000+ Book Lovers</h2>
+        <p>Get weekly curated book recommendations, exclusive deals, and reading strategies delivered to your inbox.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit">Subscribe Free</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>ReadingDove</h3>
+                <p>Your trusted source for curated book recommendations across every genre. We help readers discover their next favorite book while earning through affiliate partnerships.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#business">Business & Finance</a></li>
+                    <li><a href="#selfhelp">Self-Help & Growth</a></li>
+                    <li><a href="#fiction">Fiction & Literature</a></li>
+                    <li><a href="#nonfiction">Non-Fiction</a></li>
+                    <li><a href="#children">Children's Books</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>More Categories</h3>
+                <ul>
+                    <li><a href="#romance">Romance & Romantasy</a></li>
+                    <li><a href="#thriller">Thriller & Mystery</a></li>
+                    <li><a href="#scifi">Sci-Fi & Fantasy</a></li>
+                    <li><a href="#biography">Biography & Memoir</a></li>
+                    <li><a href="#health">Health & Wellness</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Legal & Info</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Affiliate Disclosure</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 ReadingDove. All rights reserved. | As an Amazon Associate, we earn from qualifying purchases. | <a href="#">Affiliate Disclosure</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Book Filtering
+        function filterBooks(category) {
+            const cards = document.querySelectorAll('.book-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        // Search Functionality
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.book-card');
+
+            cards.forEach(card => {
+                const title = card.querySelector('.book-title').textContent.toLowerCase();
+                const author = card.querySelector('.book-author').textContent.toLowerCase();
+                const category = card.querySelector('.book-category').textContent.toLowerCase();
+
+                if (title.includes(query) || author.includes(query) || category.includes(query)) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        document.getElementById('searchInput').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') performSearch();
+        });
+
+        // Smooth Scroll for Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Active Navigation Highlight
+        const sections = document.querySelectorAll('section, .container');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
