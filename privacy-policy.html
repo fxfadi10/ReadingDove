@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for ReadingDove - Learn how we collect, use, and protect your personal information.">
+    <title>Privacy Policy - ReadingDove</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --accent: #f39c12;
+            --light: #ecf0f1;
+            --dark: #1a252f;
+            --text: #333;
+            --text-light: #666;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: #f8f9fa;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--white);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-top {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo svg { width: 32px; height: 32px; }
+
+        .tagline {
+            font-size: 12px;
+            opacity: 0.9;
+            margin-top: -5px;
+            letter-spacing: 1px;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            transition: var(--transition);
+        }
+
+        .back-link:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* Main Content */
+        .privacy-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .privacy-header h1 {
+            font-size: 42px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .privacy-header p {
+            color: var(--text-light);
+            font-size: 16px;
+        }
+
+        .last-updated {
+            display: inline-block;
+            background: var(--light);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-light);
+            margin-top: 15px;
+        }
+
+        .privacy-section {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .privacy-section h2 {
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--accent);
+            display: inline-block;
+        }
+
+        .privacy-section h3 {
+            font-size: 18px;
+            color: var(--primary);
+            margin: 25px 0 12px 0;
+        }
+
+        .privacy-section p {
+            margin-bottom: 15px;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .privacy-section ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .privacy-section ul li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .privacy-section a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .privacy-section a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: var(--radius);
+            margin: 25px 0;
+        }
+
+        .highlight-box h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .highlight-box p {
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.8);
+            padding: 40px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .footer-bottom a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .privacy-header h1 { font-size: 32px; }
+            .privacy-section { padding: 25px; }
+            .header-top { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div>
+                <a href="index.html" class="logo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                    ReadingDove
+                </a>
+                <div class="tagline">Curated Books. Trusted Reviews. Smart Reading.</div>
+            </div>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="privacy-container">
+        <div class="privacy-header">
+            <h1>Privacy Policy</h1>
+            <p>Your privacy is important to us. This policy explains how we collect, use, and protect your information.</p>
+            <div class="last-updated">Last Updated: May 22, 2026</div>
+        </div>
+
+        <div class="privacy-section">
+            <h2>1. Information We Collect</h2>
+            <p>At ReadingDove, we collect several types of information to provide and improve our services:</p>
+
+            <h3>1.1 Information You Provide Directly</h3>
+            <ul>
+                <li><strong>Email Address:</strong> When you subscribe to our newsletter, we collect your email address to send you book recommendations, updates, and promotional content.</li>
+                <li><strong>Contact Information:</strong> If you reach out to us via email or contact forms, we collect the information you provide to respond to your inquiry.</li>
+                <li><strong>Search Queries:</strong> When you use our search functionality, we may log search terms to improve our book recommendations and site functionality.</li>
+            </ul>
+
+            <h3>1.2 Information Collected Automatically</h3>
+            <ul>
+                <li><strong>Log Data:</strong> Our servers automatically record information including your IP address, browser type, referring/exit pages, and operating system.</li>
+                <li><strong>Usage Data:</strong> We collect information about how you interact with our website, including pages visited, time spent on pages, and click patterns.</li>
+                <li><strong>Cookies and Similar Technologies:</strong> We use cookies to enhance your browsing experience, remember your preferences, and analyze site traffic.</li>
+            </ul>
+
+            <h3>1.3 Information from Third Parties</h3>
+            <ul>
+                <li><strong>Google AdSense:</strong> We use Google AdSense to display advertisements. Google may use cookies and web beacons to collect data about your visits to this and other websites to provide targeted advertising.</li>
+                <li><strong>Amazon Associates:</strong> As an Amazon Associate, we earn from qualifying purchases. Amazon may track clicks on our affiliate links to attribute sales.</li>
+                <li><strong>Analytics Providers:</strong> We may use third-party analytics services like Google Analytics to understand how visitors use our site.</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>2. How We Use Your Information</h2>
+            <p>We use the collected information for the following purposes:</p>
+            <ul>
+                <li><strong>Provide Services:</strong> To operate, maintain, and improve our website and book recommendation services.</li>
+                <li><strong>Communication:</strong> To send newsletters, respond to inquiries, and provide customer support.</li>
+                <li><strong>Personalization:</strong> To personalize your experience and deliver content and product offerings relevant to your interests.</li>
+                <li><strong>Advertising:</strong> To display targeted advertisements through Google AdSense and other advertising partners.</li>
+                <li><strong>Affiliate Tracking:</strong> To track affiliate link clicks and earn commissions from qualifying purchases.</li>
+                <li><strong>Analytics:</strong> To analyze trends, administer the site, track user movements, and gather demographic information.</li>
+                <li><strong>Security:</strong> To protect against unauthorized access, alteration, disclosure, or destruction of your personal information.</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>3. Cookies and Tracking Technologies</h2>
+            <p>We use cookies and similar tracking technologies to track activity on our website and store certain information.</p>
+
+            <h3>3.1 Types of Cookies We Use</h3>
+            <ul>
+                <li><strong>Essential Cookies:</strong> Necessary for the website to function properly. These cannot be disabled.</li>
+                <li><strong>Preference Cookies:</strong> Remember your settings and preferences for a better browsing experience.</li>
+                <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our website by collecting and reporting information anonymously.</li>
+                <li><strong>Advertising Cookies:</strong> Used by Google AdSense and other partners to deliver relevant advertisements and track ad performance.</li>
+            </ul>
+
+            <h3>3.2 Managing Cookies</h3>
+            <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our service. To learn more about managing cookies, visit <a href="https://www.allaboutcookies.org" target="_blank" rel="noopener">allaboutcookies.org</a>.</p>
+
+            <div class="highlight-box">
+                <h3>Google AdSense & DoubleClick Cookie</h3>
+                <p>Google, as a third-party vendor, uses cookies to serve ads on our site. Google's use of the DoubleClick cookie enables it and its partners to serve ads to our users based on their visit to our site and other sites on the Internet. Users may opt out of the use of the DoubleClick cookie for interest-based advertising by visiting <a href="https://adssettings.google.com" target="_blank" rel="noopener" style="color: #f39c12;">Google Ads Settings</a>.</p>
+            </div>
+        </div>
+
+        <div class="privacy-section">
+            <h2>4. Affiliate Disclosure</h2>
+            <p>ReadingDove is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.</p>
+            <p>When you click on an affiliate link and make a purchase, we may receive a commission at no additional cost to you. Amazon may use cookies to track these referrals for up to 24 hours after clicking the link.</p>
+            <p>We only recommend books we genuinely believe in, and our editorial opinions remain independent of any affiliate relationships.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>5. Data Sharing and Third Parties</h2>
+            <p>We do not sell, trade, or rent your personal identification information to others. We may share generic aggregated demographic information not linked to any personal identification information with our business partners, trusted affiliates, and advertisers for the purposes outlined above.</p>
+
+            <h3>5.1 Third-Party Service Providers</h3>
+            <p>We may employ third-party companies and individuals to:</p>
+            <ul>
+                <li>Facilitate our website operations</li>
+                <li>Provide website-related services (e.g., hosting, analytics)</li>
+                <li>Assist us in analyzing how our website is used</li>
+            </ul>
+            <p>These third parties have access to your personal information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
+
+            <h3>5.2 Legal Requirements</h3>
+            <p>We may disclose your personal information if required to do so by law or in response to valid requests by public authorities (e.g., a court or government agency).</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>6. Data Security</h2>
+            <p>We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+            <p>We regularly review our security practices and update them as needed to ensure the ongoing integrity and confidentiality of your data.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>7. Your Data Protection Rights</h2>
+            <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+            <ul>
+                <li><strong>Access:</strong> The right to request copies of your personal data.</li>
+                <li><strong>Rectification:</strong> The right to request correction of inaccurate or incomplete information.</li>
+                <li><strong>Erasure:</strong> The right to request deletion of your personal data under certain conditions.</li>
+                <li><strong>Restriction:</strong> The right to request restriction of processing your personal data.</li>
+                <li><strong>Objection:</strong> The right to object to our processing of your personal data.</li>
+                <li><strong>Data Portability:</strong> The right to request transfer of your data to another organization or directly to you.</li>
+            </ul>
+            <p>To exercise any of these rights, please contact us using the information provided in the "Contact Us" section below.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>8. Children's Privacy</h2>
+            <p>Our website is not intended for children under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately. If we discover that a child under 13 has provided us with personal information, we will delete such information from our servers.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>9. Links to Other Websites</h2>
+            <p>Our website may contain links to other websites that are not operated by us (including Amazon.com and other affiliate partners). If you click on a third-party link, you will be directed to that third party's site. We strongly advise you to review the privacy policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>10. Changes to This Privacy Policy</h2>
+            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>11. Contact Us</h2>
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+            <ul>
+                <li><strong>Email:</strong> privacy@readingdove.com</li>
+                <li><strong>Website:</strong> <a href="index.html">www.readingdove.com</a></li>
+                <li><strong>Response Time:</strong> We aim to respond to all inquiries within 48 hours.</li>
+            </ul>
+        </div>
+
+        <div class="privacy-section">
+            <h2>12. California Privacy Rights (CCPA)</h2>
+            <p>If you are a California resident, you have specific rights regarding your personal information under the California Consumer Privacy Act (CCPA):</p>
+            <ul>
+                <li><strong>Right to Know:</strong> You have the right to request disclosure of the categories and specific pieces of personal information we have collected.</li>
+                <li><strong>Right to Delete:</strong> You have the right to request deletion of your personal information.</li>
+                <li><strong>Right to Opt-Out:</strong> You have the right to opt-out of the sale of your personal information (we do not sell personal information).</li>
+                <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your CCPA rights.</li>
+            </ul>
+            <p>To exercise these rights, please contact us using the information provided above.</p>
+        </div>
+
+        <div class="privacy-section">
+            <h2>13. GDPR Compliance (EU Residents)</h2>
+            <p>If you are a resident of the European Economic Area (EEA), you have certain data protection rights under the General Data Protection Regulation (GDPR). ReadingDove aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your personal data.</p>
+            <p>Our legal basis for collecting and using your personal information depends on the specific context in which we collect it:</p>
+            <ul>
+                <li>We need to perform a contract with you</li>
+                <li>You have given us permission to do so</li>
+                <li>Processing is in our legitimate interests and not overridden by your rights</li>
+                <li>For payment processing purposes</li>
+                <li>To comply with the law</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bottom">
+            <p>© 2026 ReadingDove. All rights reserved. | <a href="index.html">Home</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Affiliate Disclosure</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
