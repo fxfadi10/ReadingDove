@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ReadingDove Terms of Service - Please read our terms and conditions carefully before using our website.">
+    <title>Terms of Service - ReadingDove</title>
+
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --accent: #f39c12;
+            --light: #ecf0f1;
+            --dark: #1a252f;
+            --text: #333;
+            --text-light: #666;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: #f8f9fa;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--white);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-top {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .logo svg { width: 32px; height: 32px; }
+
+        .tagline {
+            font-size: 12px;
+            opacity: 0.9;
+            margin-top: -5px;
+            letter-spacing: 1px;
+        }
+
+        .back-link {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .back-link:hover {
+            background: rgba(255,255,255,0.2);
+            gap: 10px;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .last-updated {
+            background: var(--light);
+            border-left: 4px solid var(--accent);
+            padding: 15px 20px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin-bottom: 40px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .last-updated strong {
+            color: var(--primary);
+        }
+
+        .toc {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+        }
+
+        .toc h2 {
+            font-size: 20px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light);
+        }
+
+        .toc ul {
+            list-style: none;
+            columns: 2;
+            column-gap: 30px;
+        }
+
+        .toc ul li {
+            margin-bottom: 10px;
+        }
+
+        .toc ul li a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toc ul li a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .toc ul li a::before {
+            content: '→';
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .section {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            scroll-margin-top: 100px;
+        }
+
+        .section h2 {
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--secondary);
+            display: inline-block;
+        }
+
+        .section h3 {
+            font-size: 18px;
+            color: var(--primary);
+            margin: 25px 0 12px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        .section ul, .section ol {
+            margin: 15px 0 15px 25px;
+            color: var(--text);
+        }
+
+        .section ul li, .section ol li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin: 20px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: var(--dark);
+        }
+
+        .highlight-box strong {
+            color: var(--primary);
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fde8e8 0%, #fed7d7 100%);
+            border-left: 4px solid var(--secondary);
+            padding: 20px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin: 20px 0;
+        }
+
+        .warning-box p {
+            margin: 0;
+            color: var(--dark);
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%);
+            border-left: 4px solid #38b2ac;
+            padding: 20px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin: 20px 0;
+        }
+
+        .info-box p {
+            margin: 0;
+            color: var(--dark);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.8);
+            padding: 40px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 28px; }
+            .toc ul { columns: 1; }
+            .section { padding: 25px; }
+            .header-top { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+                <div>
+                    ReadingDove
+                    <div class="tagline">Curated Books. Trusted Reviews. Smart Reading.</div>
+                </div>
+            </a>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Terms of Service</h1>
+        <p>Please read these terms carefully before using ReadingDove. By accessing our website, you agree to be bound by these terms.</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <div class="last-updated">
+            <strong>Last Updated:</strong> May 23, 2026 | <strong>Effective Date:</strong> May 23, 2026
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>📋 Table of Contents</h2>
+            <ul>
+                <li><a href="#acceptance">Acceptance of Terms</a></li>
+                <li><a href="#changes">Changes to Terms</a></li>
+                <li><a href="#eligibility">Eligibility</a></li>
+                <li><a href="#accounts">User Accounts</a></li>
+                <li><a href="#content">Content & Intellectual Property</a></li>
+                <li><a href="#affiliate">Affiliate Disclosure</a></li>
+                <li><a href="#conduct">User Conduct</a></li>
+                <li><a href="#thirdparty">Third-Party Links</a></li>
+                <li><a href="#disclaimer">Disclaimer of Warranties</a></li>
+                <li><a href="#liability">Limitation of Liability</a></li>
+                <li><a href="#indemnification">Indemnification</a></li>
+                <li><a href="#termination">Termination</a></li>
+                <li><a href="#governing">Governing Law</a></li>
+                <li><a href="#disputes">Dispute Resolution</a></li>
+                <li><a href="#contact">Contact Information</a></li>
+            </ul>
+        </div>
+
+        <!-- Section 1 -->
+        <div class="section" id="acceptance">
+            <h2>1. Acceptance of Terms</h2>
+            <p>Welcome to ReadingDove ("we," "our," "us," or "ReadingDove"). These Terms of Service ("Terms") constitute a legally binding agreement between you and ReadingDove regarding your access to and use of our website located at <strong>www.readingdove.com</strong> (the "Site"), including any content, functionality, and services offered on or through the Site.</p>
+
+            <p>By accessing or using the Site, you acknowledge that you have read, understood, and agree to be bound by these Terms and our <a href="privacy-policy.html" style="color: var(--secondary);">Privacy Policy</a>. If you do not agree to these Terms, you must not access or use the Site.</p>
+
+            <div class="highlight-box">
+                <p><strong>Important:</strong> These Terms apply to all visitors, users, and others who access or use the Site, regardless of whether they create an account or make a purchase through our affiliate links.</p>
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="section" id="changes">
+            <h2>2. Changes to Terms</h2>
+            <p>We reserve the right to modify, amend, or update these Terms at any time in our sole discretion. All changes are effective immediately when we post them on the Site.</p>
+
+            <p>Your continued use of the Site following the posting of revised Terms means that you accept and agree to the changes. We encourage you to review these Terms frequently to stay informed of any updates.</p>
+
+            <p>We will indicate the date these Terms were last updated at the top of this page. Material changes will be notified through:</p>
+            <ul>
+                <li>A prominent notice on our homepage</li>
+                <li>An email notification to registered users (if applicable)</li>
+                <li>A banner notification when you next visit the Site</li>
+            </ul>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="section" id="eligibility">
+            <h2>3. Eligibility</h2>
+            <p>You must be at least <strong>13 years of age</strong> to use the Site. By using the Site, you represent and warrant that:</p>
+            <ul>
+                <li>You are at least 13 years old</li>
+                <li>You have the legal capacity to enter into a binding contract</li>
+                <li>You are not barred from using the Site under any applicable laws</li>
+                <li>All information you provide is accurate, current, and complete</li>
+            </ul>
+
+            <div class="warning-box">
+                <p><strong>Note for Minors:</strong> If you are between 13 and 18 years old, you may use the Site only under the supervision of a parent or legal guardian who agrees to be bound by these Terms.</p>
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="section" id="accounts">
+            <h2>4. User Accounts</h2>
+            <p>To access certain features of the Site, such as our newsletter subscription, you may be required to provide certain information. You agree to:</p>
+            <ul>
+                <li>Provide accurate, current, and complete information during registration</li>
+                <li>Maintain and promptly update your information to keep it accurate</li>
+                <li>Maintain the security of your account credentials</li>
+                <li>Notify us immediately of any unauthorized access or security breach</li>
+                <li>Accept responsibility for all activities that occur under your account</li>
+            </ul>
+
+            <p>We reserve the right to disable any user account at any time if, in our opinion, you have failed to comply with any provision of these Terms.</p>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="section" id="content">
+            <h2>5. Content & Intellectual Property</h2>
+
+            <h3>5.1 Our Content</h3>
+            <p>The Site and its entire contents, features, and functionality (including but not limited to all information, software, text, displays, images, video, audio, design, selection, and arrangement thereof) are owned by ReadingDove, its licensors, or other providers and are protected by United States and international copyright, trademark, patent, trade secret, and other intellectual property laws.</p>
+
+            <p>You may not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on our Site, except as follows:</p>
+            <ul>
+                <li>Your computer may temporarily store copies of such materials in RAM incidental to your accessing and viewing those materials</li>
+                <li>You may store files that are automatically cached by your Web browser for display enhancement purposes</li>
+                <li>You may print or download one copy of a reasonable number of pages of the Site for your own personal, non-commercial use and not for further reproduction, publication, or distribution</li>
+            </ul>
+
+            <h3>5.2 Trademarks</h3>
+            <p>The ReadingDove name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of ReadingDove or its affiliates or licensors. You must not use such marks without our prior written permission.</p>
+
+            <h3>5.3 User-Generated Content</h3>
+            <p>If you submit, post, or display any content on or through the Site ("User Content"), you grant us a non-exclusive, royalty-free, perpetual, irrevocable, and fully sublicensable right to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, and display such User Content throughout the world in any media.</p>
+        </div>
+
+        <!-- Section 6 -->
+        <div class="section" id="affiliate">
+            <h2>6. Affiliate Disclosure</h2>
+            <p>ReadingDove participates in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.</p>
+
+            <div class="info-box">
+                <p><strong>Full Disclosure:</strong> As an Amazon Associate, ReadingDove earns from qualifying purchases. When you click on an affiliate link and make a purchase, we may receive a small commission at no additional cost to you. This helps support our website and allows us to continue providing quality book recommendations.</p>
+            </div>
+
+            <p>Key points about our affiliate relationships:</p>
+            <ul>
+                <li>We only recommend books we genuinely believe will provide value to our readers</li>
+                <li>Our reviews and recommendations are honest and independent</li>
+                <li>Affiliate commissions do not influence our editorial content or book selections</li>
+                <li>Prices displayed are accurate to the best of our knowledge but subject to change</li>
+                <li>We are not responsible for the content, privacy practices, or terms of Amazon or other third-party retailers</li>
+            </ul>
+
+            <p>For complete details, please see our <a href="privacy-policy.html" style="color: var(--secondary);">Affiliate Disclosure</a> page.</p>
+        </div>
+
+        <!-- Section 7 -->
+        <div class="section" id="conduct">
+            <h2>7. User Conduct</h2>
+            <p>You agree to use the Site only for lawful purposes and in accordance with these Terms. You agree not to use the Site:</p>
+            <ul>
+                <li>In any way that violates any applicable federal, state, local, or international law or regulation</li>
+                <li>To transmit, or procure the sending of, any advertising or promotional material, including any "junk mail," "chain letter," "spam," or any other similar solicitation</li>
+                <li>To impersonate or attempt to impersonate ReadingDove, a ReadingDove employee, another user, or any other person or entity</li>
+                <li>To engage in any other conduct that restricts or inhibits anyone's use or enjoyment of the Site, or which may harm ReadingDove or users of the Site</li>
+                <li>To introduce any viruses, trojan horses, worms, logic bombs, or other material that is malicious or technologically harmful</li>
+                <li>To attempt to gain unauthorized access to, interfere with, damage, or disrupt any parts of the Site</li>
+            </ul>
+        </div>
+
+        <!-- Section 8 -->
+        <div class="section" id="thirdparty">
+            <h2>8. Third-Party Links</h2>
+            <p>The Site may contain links to third-party websites, services, or resources that are not owned or controlled by ReadingDove. These links are provided for your convenience only.</p>
+
+            <p>We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services. You acknowledge and agree that ReadingDove shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services available on or through any such websites or services.</p>
+
+            <p>We strongly advise you to read the terms and conditions and privacy policies of any third-party websites or services that you visit.</p>
+        </div>
+
+        <!-- Section 9 -->
+        <div class="section" id="disclaimer">
+            <h2>9. Disclaimer of Warranties</h2>
+            <p>THE SITE AND ALL INFORMATION, CONTENT, MATERIALS, PRODUCTS, AND SERVICES INCLUDED ON OR OTHERWISE MADE AVAILABLE TO YOU THROUGH THE SITE ARE PROVIDED BY READINGDOVE ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.</p>
+
+            <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, READINGDOVE DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.</p>
+
+            <p>We do not warrant that:</p>
+            <ul>
+                <li>The Site will be uninterrupted, timely, secure, or error-free</li>
+                <li>The results that may be obtained from the use of the Site will be accurate or reliable</li>
+                <li>Any errors in the Site will be corrected</li>
+                <li>Any books recommended will meet your specific needs or expectations</li>
+            </ul>
+
+            <div class="warning-box">
+                <p><strong>Book Content Disclaimer:</strong> ReadingDove provides book recommendations and reviews for informational purposes only. We do not endorse or guarantee the accuracy, completeness, or quality of any book's content. Reader discretion is advised, particularly for books containing mature themes.</p>
+            </div>
+        </div>
+
+        <!-- Section 10 -->
+        <div class="section" id="liability">
+            <h2>10. Limitation of Liability</h2>
+            <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL READINGDOVE, ITS AFFILIATES, OR THEIR LICENSORS, SERVICE PROVIDERS, EMPLOYEES, AGENTS, OFFICERS, OR DIRECTORS BE LIABLE FOR DAMAGES OF ANY KIND, UNDER ANY LEGAL THEORY, ARISING OUT OF OR IN CONNECTION WITH YOUR USE, OR INABILITY TO USE, THE SITE, ANY WEBSITES LINKED TO IT, ANY CONTENT ON THE SITE OR SUCH OTHER WEBSITES, INCLUDING ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES.</p>
+
+            <p>This limitation of liability applies whether the alleged liability is based on contract, tort, negligence, strict liability, or any other basis, and even if ReadingDove has been advised of the possibility of such damage.</p>
+
+            <p>Some jurisdictions do not allow the exclusion or limitation of liability for consequential or incidental damages, so the above limitation may not apply to you.</p>
+        </div>
+
+        <!-- Section 11 -->
+        <div class="section" id="indemnification">
+            <h2>11. Indemnification</h2>
+            <p>You agree to defend, indemnify, and hold harmless ReadingDove, its affiliates, licensors, and service providers, and its and their respective officers, directors, employees, contractors, agents, licensors, suppliers, successors, and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to:</p>
+            <ul>
+                <li>Your violation of these Terms</li>
+                <li>Your use of the Site, including any use of the Site's content, services, and products other than as expressly authorized in these Terms</li>
+                <li>Your violation of any rights of another, including intellectual property rights</li>
+                <li>Your violation of any applicable laws, rules, or regulations</li>
+            </ul>
+        </div>
+
+        <!-- Section 12 -->
+        <div class="section" id="termination">
+            <h2>12. Termination</h2>
+            <p>We may terminate or suspend your access to all or part of the Site, without notice, for any conduct that we, in our sole discretion, believe is in violation of any applicable law or is harmful to the interests of another user, a third-party provider, a service provider, or us.</p>
+
+            <p>All provisions of these Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.</p>
+        </div>
+
+        <!-- Section 13 -->
+        <div class="section" id="governing">
+            <h2>13. Governing Law</h2>
+            <p>These Terms and any dispute or claim arising out of or in connection with them or their subject matter or formation shall be governed by and construed in accordance with the laws of the <strong>State of Delaware, United States</strong>, without giving effect to any choice or conflict of law provision or rule.</p>
+
+            <p>Any legal suit, action, or proceeding arising out of, or related to, these Terms or the Site shall be instituted exclusively in the federal or state courts located in Delaware. You waive any and all objections to the exercise of jurisdiction over you by such courts and to venue in such courts.</p>
+        </div>
+
+        <!-- Section 14 -->
+        <div class="section" id="disputes">
+            <h2>14. Dispute Resolution</h2>
+
+            <h3>14.1 Informal Resolution</h3>
+            <p>Before filing any claim against ReadingDove, you agree to try to resolve the dispute informally by contacting us at <strong>legal@readingdove.com</strong>. We'll try to resolve the dispute informally by contacting you via email. If a dispute is not resolved within 30 days of submission, you or ReadingDove may bring a formal proceeding.</p>
+
+            <h3>14.2 Arbitration Agreement</h3>
+            <p>You and ReadingDove agree that any dispute, claim, or controversy arising out of or relating to these Terms or the breach, termination, enforcement, interpretation, or validity thereof, or to the use of the Site (collectively, "Disputes") will be settled by binding arbitration.</p>
+
+            <p>The arbitration will be conducted by a single arbitrator in accordance with the rules of the American Arbitration Association. The arbitrator's decision will be final and binding, and judgment on the award rendered by the arbitrator may be entered in any court having jurisdiction thereof.</p>
+
+            <h3>14.3 Class Action Waiver</h3>
+            <p>YOU AND READINGDOVE AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING.</p>
+        </div>
+
+        <!-- Section 15 -->
+        <div class="section" id="contact">
+            <h2>15. Contact Information</h2>
+            <p>If you have any questions about these Terms, please contact us:</p>
+
+            <div class="info-box">
+                <p><strong>ReadingDove</strong><br>
+                Email: <a href="mailto:legal@readingdove.com" style="color: var(--primary); font-weight: 600;">legal@readingdove.com</a><br>
+                Mailing Address: ReadingDove Legal Department, 123 Book Street, Suite 100, Wilmington, DE 19801</p>
+            </div>
+
+            <p>We aim to respond to all inquiries within 2 business days. For urgent matters, please include "URGENT" in your email subject line.</p>
+        </div>
+
+        <!-- Additional Legal Notices -->
+        <div class="section">
+            <h2>Additional Legal Notices</h2>
+
+            <h3>Severability</h3>
+            <p>If any provision of these Terms is held to be invalid, illegal, or unenforceable for any reason, such provision shall be eliminated or limited to the minimum extent such that the remaining provisions of the Terms will continue in full force and effect.</p>
+
+            <h3>Waiver</h3>
+            <p>No waiver of any term or condition set out in these Terms shall be deemed a further or continuing waiver of such term or condition or a waiver of any other term or condition, and any failure to assert a right or provision under these Terms shall not constitute a waiver of such right or provision.</p>
+
+            <h3>Entire Agreement</h3>
+            <p>These Terms, together with our Privacy Policy and Affiliate Disclosure, constitute the sole and entire agreement between you and ReadingDove regarding the Site and supersede all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, regarding the Site.</p>
+
+            <h3>Assignment</h3>
+            <p>You may not assign or transfer these Terms, by operation of law or otherwise, without our prior written consent. Any attempt by you to assign or transfer these Terms without such consent will be null and void. We may freely assign or transfer these Terms without restriction.</p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="privacy-policy.html">Affiliate Disclosure</a>
+                <a href="mailto:legal@readingdove.com">Contact</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 ReadingDove. All rights reserved. | As an Amazon Associate, we earn from qualifying purchases.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
