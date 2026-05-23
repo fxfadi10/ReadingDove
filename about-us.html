@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About ReadingDove - Learn about our mission, story, and the team behind your trusted book recommendations.">
+    <title>About Us - ReadingDove</title>
+
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --accent: #f39c12;
+            --light: #ecf0f1;
+            --dark: #1a252f;
+            --text: #333;
+            --text-light: #666;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.15);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: #f8f9fa;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--white);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-top {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .logo svg { width: 32px; height: 32px; }
+
+        .tagline {
+            font-size: 12px;
+            opacity: 0.9;
+            margin-top: -5px;
+            letter-spacing: 1px;
+        }
+
+        .back-link {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .back-link:hover {
+            background: rgba(255,255,255,0.2);
+            gap: 10px;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></svg>');
+            background-size: 100px;
+            opacity: 0.3;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .page-header h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .page-header p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Story Section */
+        .story-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .story-image {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: var(--radius);
+            padding: 60px 40px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-image .big-icon {
+            font-size: 100px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .story-image h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .story-image p {
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        .story-content h2 {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .story-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .story-content p {
+            margin-bottom: 18px;
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        /* Mission Cards */
+        .mission-section {
+            margin-bottom: 80px;
+        }
+
+        .mission-section h2 {
+            font-size: 32px;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .mission-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .mission-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 35px 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .mission-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin: 0 auto 20px;
+            color: white;
+        }
+
+        .mission-card h3 {
+            font-size: 20px;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .mission-card p {
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            border-radius: var(--radius);
+            padding: 60px 40px;
+            margin-bottom: 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .stats-section h2 {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 42px;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 8px;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* How It Works */
+        .how-section {
+            margin-bottom: 80px;
+        }
+
+        .how-section h2 {
+            font-size: 32px;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .how-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .how-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .how-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 35px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .how-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .how-step {
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            background: var(--secondary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .how-card h3 {
+            font-size: 20px;
+            color: var(--primary);
+            margin: 20px 0 12px;
+        }
+
+        .how-card p {
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Values Section */
+        .values-section {
+            margin-bottom: 60px;
+        }
+
+        .values-section h2 {
+            font-size: 32px;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .values-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .value-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .value-icon {
+            font-size: 36px;
+            flex-shrink: 0;
+        }
+
+        .value-content h3 {
+            font-size: 18px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .value-content p {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            border-radius: var(--radius);
+            padding: 60px 40px;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-section h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            font-size: 16px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 25px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 14px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .cta-btn.primary {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .cta-btn.primary:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+        }
+
+        .cta-btn.secondary {
+            background: rgba(255,255,255,0.15);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .cta-btn.secondary:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.8);
+            padding: 40px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .story-section { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .how-grid { grid-template-columns: 1fr; }
+            .values-grid { grid-template-columns: 1fr; }
+            .page-header h1 { font-size: 28px; }
+            .stat-number { font-size: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+                <div>
+                    ReadingDove
+                    <div class="tagline">Curated Books. Trusted Reviews. Smart Reading.</div>
+                </div>
+            </a>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1>About ReadingDove</h1>
+            <p>We're on a mission to help every reader discover their next favorite book through honest, expert-curated recommendations across every genre.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Story Section -->
+        <section class="story-section">
+            <div class="story-image">
+                <span class="big-icon">📚</span>
+                <h3>Curated with Care</h3>
+                <p>Every recommendation is hand-picked by readers, for readers.</p>
+            </div>
+            <div class="story-content">
+                <h2>Our Story</h2>
+                <p>ReadingDove was born from a simple frustration: too many books, too little time, and no reliable way to find the gems worth reading. In 2024, a small team of passionate readers set out to build the book recommendation site we wished existed.</p>
+                <p>What started as a humble blog reviewing business and self-help books quickly grew into a trusted destination for readers across every genre. Today, ReadingDove serves thousands of book lovers monthly, helping them cut through the noise and find stories that truly resonate.</p>
+                <p>We believe great books have the power to transform lives, spark new ideas, and connect people across cultures and generations. That's why we take every recommendation seriously — because your next favorite book could change everything.</p>
+            </div>
+        </section>
+
+        <!-- Mission Cards -->
+        <section class="mission-section">
+            <h2>What We Stand For</h2>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="mission-icon">🔍</div>
+                    <h3>Honest Reviews</h3>
+                    <p>We only recommend books we genuinely believe in. No paid placements, no hidden agendas — just authentic opinions from real readers.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">🎯</div>
+                    <h3>Expert Curation</h3>
+                    <p>Our team reads hundreds of books annually across every genre to bring you the best of the best, saving you time and money.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">🌍</div>
+                    <h3>Every Genre</h3>
+                    <p>From business breakthroughs to fantasy epics, we cover 10+ categories so every reader finds their perfect match.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">💡</div>
+                    <h3>Smart Reading</h3>
+                    <p>We don't just list books — we explain why they matter, who they're for, and how they can impact your life.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <h2>By the Numbers</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">35+</span>
+                    <span class="stat-label">Curated Books</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10</span>
+                    <span class="stat-label">Categories</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">25K+</span>
+                    <span class="stat-label">Newsletter Readers</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10</span>
+                    <span class="stat-label">Expert Articles</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="how-section">
+            <h2>How ReadingDove Works</h2>
+            <div class="how-grid">
+                <div class="how-card">
+                    <div class="how-step">1</div>
+                    <h3>We Read</h3>
+                    <p>Our team reads, researches, and tests books across every genre. We look at bestseller data, critical reviews, and reader feedback to identify standout titles.</p>
+                </div>
+                <div class="how-card">
+                    <div class="how-step">2</div>
+                    <h3>We Curate</h3>
+                    <p>Only the best books make our lists. Each recommendation includes an honest summary, rating, price comparison, and direct affiliate link to Amazon.</p>
+                </div>
+                <div class="how-card">
+                    <div class="how-step">3</div>
+                    <h3>You Discover</h3>
+                    <p>Browse by category, read our articles, or subscribe to our newsletter. Finding your next favorite book has never been easier — or more trustworthy.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <h2>Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <div class="value-content">
+                        <h3>Reader First</h3>
+                        <p>Every decision we make starts with one question: "Does this help our readers?" Your trust is our most valuable asset.</p>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🔒</div>
+                    <div class="value-content">
+                        <h3>Transparency</h3>
+                        <p>We clearly disclose our affiliate relationships. You'll always know when we earn a commission — and it never influences our recommendations.</p>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">♻️</div>
+                    <div class="value-content">
+                        <h3>Continuous Improvement</h3>
+                        <p>We regularly update our book lists, refresh our content, and listen to reader feedback to keep getting better.</p>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🌟</div>
+                    <div class="value-content">
+                        <h3>Quality Over Quantity</h3>
+                        <p>We'd rather recommend 35 exceptional books than 350 mediocre ones. Every title on ReadingDove earns its place.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Join the ReadingDove Community</h2>
+            <p>Get weekly curated book recommendations, exclusive deals, and reading strategies delivered straight to your inbox. No spam, ever.</p>
+            <div class="cta-buttons">
+                <a href="index.html#newsletter" class="cta-btn primary">Subscribe to Newsletter</a>
+                <a href="contact-us.html" class="cta-btn secondary">Get in Touch</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="privacy-policy.html">Affiliate Disclosure</a>
+                <a href="contact-us.html">Contact</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 ReadingDove. All rights reserved. | As an Amazon Associate, we earn from qualifying purchases.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
