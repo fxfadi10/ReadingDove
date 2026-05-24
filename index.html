@@ -1643,9 +1643,15 @@
 
     <script>
         // Book Filtering
-        function showBooks(category) {
-            document.getElementById('books-section').scrollIntoView({ behavior: 'smooth' });
-             filterBooks(category);
+         function showBooks(category) {
+            filterBooks(category);
+            const cards = document.querySelectorAll('.book-card');
+            for (let card of cards) {
+                if (card.dataset.category === category) {
+                    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    break;
+                }
+            }
         }
         function filterBooks(category) {
             const cards = document.querySelectorAll('.book-card');
