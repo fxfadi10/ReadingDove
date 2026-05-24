@@ -1644,6 +1644,12 @@
     <script>
         // Book Filtering
          function showBooks(category) {
+           // Remove orange underline from ALL nav links
+            document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('active'));
+            // Add orange underline ONLY to the clicked category
+            const clicked = document.querySelector(`.nav-links a[onclick*="showBooks('${category}')"]`);
+            if (clicked) clicked.classList.add('active');
+            
             filterBooks(category);
             const cards = document.querySelectorAll('.book-card');
             for (let card of cards) {
@@ -1717,7 +1723,8 @@
 
             navLinks.forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + current) {
+               const href = link.getAttribute('href');
+                if (href === '#' + current && href !== '#books-section') {
                     link.classList.add('active');
                 }
             });
