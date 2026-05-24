@@ -681,16 +681,16 @@
             <div class="nav-container">
                 <ul class="nav-links">
                     <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#business">Business</a></li>
-                    <li><a href="#selfhelp">Self-Help</a></li>
-                    <li><a href="#fiction">Fiction</a></li>
-                    <li><a href="#nonfiction">Non-Fiction</a></li>
-                    <li><a href="#children">Children</a></li>
-                    <li><a href="#romance">Romance</a></li>
-                    <li><a href="#thriller">Thriller</a></li>
-                    <li><a href="#scifi">Sci-Fi & Fantasy</a></li>
-                    <li><a href="#biography">Biography</a></li>
-                    <li><a href="#health">Health</a></li>
+                    <li><a href="#books-section" onclick="showBooks('business')">Business</a></li>
+                    <li><a href="#books-section" onclick="showBooks('selfhelp')">Self-Help</a></li>
+                    <li><a href="#books-section" onclick="showBooks('fiction')">Fiction</a></li>
+                    <li><a href="#books-section" onclick="showBooks('nonfiction')">Non-Fiction</a></li>
+                    <li><a href="#books-section" onclick="showBooks('children')">Children</a></li>
+                    <li><a href="#books-section" onclick="showBooks('romance')">Romance</a></li>
+                    <li><a href="#books-section" onclick="showBooks('thriller')">Thriller</a></li>
+                    <li><a href="#books-section" onclick="showBooks('scifi')">Sci-Fi & Fantasy</a></li>
+                    <li><a href="#books-section" onclick="showBooks('biography')">Biography</a></li>
+                    <li><a href="#books-section" onclick="showBooks('health')">Health</a></li>
                     <li><a href="#blog">Blog</a></li>
                 </ul>
             </div>
@@ -735,7 +735,7 @@
     </div>
 
     <!-- Books Section -->
-    <div class="container">
+    <div class="container" id="books-section">
         <div class="section-header">
             <h2 class="section-title">Featured Books</h2>
             <div class="filter-buttons">
@@ -1643,6 +1643,10 @@
 
     <script>
         // Book Filtering
+        function showBooks(category) {
+            document.getElementById('books-section').scrollIntoView({ behavior: 'smooth' });
+             filterBooks(category);
+        }
         function filterBooks(category) {
             const cards = document.querySelectorAll('.book-card');
             const buttons = document.querySelectorAll('.filter-btn');
