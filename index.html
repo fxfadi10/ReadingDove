@@ -651,6 +651,10 @@
             .blog-grid { grid-template-columns: 1fr; }
             .section-header { flex-direction: column; align-items: flex-start; }
          .nav-links li a { padding: 8px 10px; font-size: 11px; }
+                     .full-bleed-row {
+                height: 35vh;
+                min-height: 180px;
+            }
         }
 
         /* Animations */
@@ -665,6 +669,39 @@
 
         /* Hide/Show for filtering */
         .hidden { display: none !important; }
+                /* === FULL-WIDTH BOOK COVER ROW === */
+        .full-bleed-row {
+            display: flex;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            position: relative;
+            left: 50%;
+            right: 50%;
+            transform: translateX(-50%);
+            height: 45vh;
+            min-height: 280px;
+            overflow: hidden;
+        }
+
+        .full-bleed-row .cover {
+            flex: 1 1 0;
+            min-width: 0;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .full-bleed-row .cover:hover {
+            transform: scale(1.03);
+            z-index: 2;
+        }
+
+        .full-bleed-row .cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -728,6 +765,28 @@
             </div>
         </div>
     </section>
+
+    <!-- Full-Width Book Covers Row -->
+    <div class="full-bleed-row">
+        <div class="cover">
+            <img src="book1.jpg" alt="Book 1">
+        </div>
+        <div class="cover">
+            <img src="book2.jpg" alt="Book 2">
+        </div>
+        <div class="cover">
+            <img src="book3.jpg" alt="Book 3">
+        </div>
+        <div class="cover">
+            <img src="book4.jpg" alt="Book 4">
+        </div>
+        <div class="cover">
+            <img src="book5.jpg" alt="Book 5">
+        </div>
+        <div class="cover">
+            <img src="book6.jpg" alt="Book 6">
+        </div>
+    </div>
 
     <!-- Top AdSense Slot -->
     <div class="ad-container">
